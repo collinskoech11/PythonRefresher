@@ -1,15 +1,13 @@
-# Noel Wafuko
-# nww010 # 11308656
-# For Instructor Jeff Long
 
-def balance(weight, leftSide, rightSide):
+
+def balance(weight, left, right):
     weight = []
 
     #Base case 
-    if (leftSide > rightSide) :
+    if (left > right) :
         return False
         #Recursive case
-        if (rightSide > leftSide) :
+        if (right > left) :
             return False
     #Recursive case 
     else :

@@ -1,3 +1,4 @@
+
 #generate a random sales db based on a given seed for reproducability
 
 import math as m
@@ -62,9 +63,23 @@ def get_sorted_cities(db):
                 'Toronto' : 0} #to simplify the exam I am providing this, but in practice you would build this structure on the fly
 
     #YOUR CODE GOES HERE
-    return city_list
+    
 
+    sales = city_rec.sales
+    sorted_sales = sales.sort(reverse = True)
 
+    
+    for index in range(1, len(sorted_sales)):
+        currentValue = sorted_sales[index]
+        currentPosition = index
+
+        while currentPosition > 0 and compare_function(sorted_sales[currentPosition - 1], currentValue):
+            sorted_sales[currentPosition] = array[currentPosition - 1]
+            currentPosition = currentPosition - 1
+
+        array[currentPosition] = currentValue
+
+    return get_sorted_cities(city_rec, sorted_sales)
 #######################################
 # Change nothing BELOW this line
 

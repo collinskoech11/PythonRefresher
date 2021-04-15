@@ -1,6 +1,4 @@
-# Noel Wafuko
-# nww010 # 11308656
-# For Instructor Jeff Long
+
 
 import unittest
 from camerafilm import develop_film

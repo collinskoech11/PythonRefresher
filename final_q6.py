@@ -1,3 +1,4 @@
+
 #generate a random sales db based on a given seed for reproducability
 
 import math as m
@@ -49,7 +50,7 @@ def generate_db(seed, c, e, s, st, sr, v):
 ################################
 # Change nothing above this line    
 
-def get_best_employee(db, emps):
+def get_best_employee(db, emps, greatest_total_sales):
     """
     sorts the list of cities visited by total sales in decending order using insertion sort
     :param db: a database as dictionary of sales records from generate_db
@@ -66,7 +67,11 @@ def get_best_employee(db, emps):
                  'Keri' : 0
     }#to simplify the exam I am providing this, but in practice you would build this structure on the fly
 
+
     #YOUR CODE GOES HERE
+    greatest_total_sales = sum(employee_rec.sales)
+
+
     return employee_rec
 
 ################################

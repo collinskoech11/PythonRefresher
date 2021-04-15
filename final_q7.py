@@ -1,6 +1,3 @@
-# Noel Wafuko
-# nww010 # 11308656
-# For Instructor Jeff Long
 
 
 def sum_digits(int1):

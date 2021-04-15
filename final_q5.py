@@ -1,3 +1,4 @@
+
 #generate a random sales db based on a given seed for reproducability
 
 import math as m
@@ -52,9 +53,9 @@ def get_employee_totals(db, emp):
     :param emp: a string containing the name of the employee
     :return: a record containing the total sales and stay length for that employee
     """
-    total_rec = {'employee' : REPLACE_THIS,
-                 'sales' : REPLACE_THIS,
-                 'stay' : REPLACE_THIS}
+    total_rec = {'employee' : employee_totals,
+                 'sales' : sum(total_rec.sales),
+                 'stay' : sum(stay_range)}
 
 	#your code here
     return total_rec
